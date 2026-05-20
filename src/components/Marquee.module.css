@@ -1,0 +1,33 @@
+.wrap {
+  overflow: hidden;
+  border-top: 1px solid rgba(192, 192, 192, 0.06);
+  border-bottom: 1px solid rgba(192, 192, 192, 0.06);
+  padding: 1rem 0;
+  background: var(--near-black);
+}
+
+.track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+
+.item {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--silver);
+  text-transform: uppercase;
+  padding: 0 2.5rem;
+  flex-shrink: 0;
+}
+
+.dot {
+  color: var(--silver);
+  margin: 0 0.5rem;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
