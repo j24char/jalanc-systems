@@ -13,6 +13,7 @@ export interface Project {
   duration: string
   role: string
   num: string
+  logo?: string   // path relative to /public, e.g. "/images/logos/flowdesk.png"
 }
 
 export const projects: Project[] = [
@@ -35,6 +36,7 @@ export const projects: Project[] = [
     year: '2026',
     duration: '2 weeks',
     role: 'Sole Developer',
+    logo: '/images/SportsBingo.png',
   },
   {
     slug: 'InModeration',
@@ -55,6 +57,7 @@ export const projects: Project[] = [
     year: '2025',
     duration: '12 weeks',
     role: 'Sole Developer',
+	logo: '/images/InModeration.png',
   },
   {
     slug: 'Clearview',
@@ -75,6 +78,7 @@ export const projects: Project[] = [
     year: '2026',
     duration: '4 weeks',
     role: 'Sole Developer',
+    logo: '/images/Clearview.png',
   },
   {
     slug: 'SensorAnalyzer',
@@ -95,6 +99,7 @@ export const projects: Project[] = [
     year: '2025',
     duration: '8 weeks',
     role: 'Lead Architect & Developer',
+    logo: '',
   },
 ]
 

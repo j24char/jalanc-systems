@@ -101,6 +101,22 @@
   color: var(--off-white);
 }
 
+.projectLogo {
+  width: 260px;
+  height: 260px;
+  max-width: 260px;
+  max-height: 260px;
+  margin-left: 60px;
+  margin-top: 10px;
+  object-fit: contain;
+  border-radius: 30px;
+  background: rgba(192, 192, 192, 0.05);
+  padding: 14px;
+  box-shadow:
+    0 0 0 1px rgba(192, 192, 192, 0.1),
+    0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
 /* ─── SECTIONS ─── */
 .section {
   padding: 6rem 4rem;

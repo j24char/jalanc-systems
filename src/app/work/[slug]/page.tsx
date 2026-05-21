@@ -69,6 +69,21 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </FadeUp>
         </section>
 
+        {/* ─── PROJECT LOGO ─── */}
+        {project.logo && (
+          <section className={styles.logoSection}>
+            <FadeUp>
+              <div className={styles.logoWrap}>
+                <img
+                  src={project.logo}
+                  alt={`${project.name} logo`}
+                  className={styles.projectLogo}
+                />
+              </div>
+            </FadeUp>
+          </section>
+        )}
+
         {/* ─── OVERVIEW ─── */}
         <section className={styles.section}>
           <div className={styles.overviewGrid}>

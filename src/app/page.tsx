@@ -98,16 +98,27 @@ export default function Home() {
             {projects.map((project, i) => (
               <FadeUp key={project.slug} delay={i * 80}>
                 <Link href={`/work/${project.slug}`} className={styles.appCard}>
-                  <div className={styles.appNum}>{project.num}</div>
-                  <div className={styles.appName}>{project.name.toUpperCase()}</div>
-                  <div className={styles.appType}>{project.type}</div>
-                  <p className={styles.appDesc}>{project.tagline}</p>
-                  <div className={styles.appStack}>
-                    {project.stack.slice(0, 4).map(s => (
-                      <span key={s} className="stack-pill">{s}</span>
-                    ))}
+                  <div className={styles.appCardLeft}>
+                    <div className={styles.appNum}>{project.num}</div>
+                    <div className={styles.appName}>{project.name.toUpperCase()}</div>
+                    <div className={styles.appType}>{project.type}</div>
+                    <p className={styles.appDesc}>{project.tagline}</p>
+                    <div className={styles.appStack}>
+                      {project.stack.slice(0, 4).map(s => (
+                        <span key={s} className="stack-pill">{s}</span>
+                      ))}
+                    </div>
+                    <div className={styles.appCorner}>View Project →</div>
                   </div>
-                  <div className={styles.appCorner}>View Project →</div>
+                  {project.logo && (
+                    <div className={styles.appLogoWrap}>
+                      <img
+                        src={project.logo}
+                        alt={`${project.name} logo`}
+                        className={styles.appLogo}
+                      />
+                    </div>
+                  )}
                 </Link>
               </FadeUp>
             ))}
