@@ -14,6 +14,7 @@ export interface Project {
   role: string
   num: string
   logo?: string   // path relative to /public, e.g. "/images/logos/flowdesk.png"
+  url?: string   // optional URL to the live project or case study
 }
 
 export const projects: Project[] = [
@@ -37,6 +38,7 @@ export const projects: Project[] = [
     duration: '2 weeks',
     role: 'Sole Developer',
     logo: '/images/SportsBingo.png',
+    url: 'https://apps.apple.com/us/app/sportsbingo2026/id6763379742',
   },
   {
     slug: 'InModeration',
@@ -57,7 +59,8 @@ export const projects: Project[] = [
     year: '2025',
     duration: '12 weeks',
     role: 'Sole Developer',
-	logo: '/images/InModeration.png',
+	  logo: '/images/InModeration.png',
+    url: 'https://inmoderation.vercel.app/',
   },
   {
     slug: 'Clearview',
@@ -79,6 +82,7 @@ export const projects: Project[] = [
     duration: '4 weeks',
     role: 'Sole Developer',
     logo: '/images/Clearview.png',
+    url: '',
   },
   {
     slug: 'SensorAnalyzer',
@@ -100,6 +104,7 @@ export const projects: Project[] = [
     duration: '8 weeks',
     role: 'Lead Architect & Developer',
     logo: '',
+    url: '',
   },
 ]
 

@@ -112,11 +112,13 @@ export default function Home() {
                   </div>
                   {project.logo && (
                     <div className={styles.appLogoWrap}>
-                      <img
-                        src={project.logo}
-                        alt={`${project.name} logo`}
-                        className={styles.appLogo}
-                      />
+                      <a href={project.url} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={project.logo}
+                          alt={`${project.name} logo`}
+                          className={styles.appLogo}
+                        />
+                      </a>
                     </div>
                   )}
                 </Link>
