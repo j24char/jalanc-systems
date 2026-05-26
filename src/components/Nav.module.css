@@ -60,6 +60,7 @@
   color: var(--off-white);
   background: transparent;
   transition: all 0.2s;
+  margin-left: clamp(1.5rem, 4vw, 3rem);
 }
 
 .cta:hover {
