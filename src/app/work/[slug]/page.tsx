@@ -5,25 +5,34 @@ import Footer from '@/components/Footer'
 import FadeUp from '@/components/FadeUp'
 import { getProjectBySlug, projects } from '@/data/projects'
 import styles from './page.module.css'
+import React from 'react'
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = getProjectBySlug(params.slug)
-  if (!project) return {}
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+//export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: PageProps) {
+  const resolvedParams = await params;
+  const project = getProjectBySlug(resolvedParams.slug);
+  if (!project) return {};
   return {
     title: `${project.name} — Jalanc Systems LLC`,
     description: project.tagline,
-  }
+  };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = getProjectBySlug(params.slug)
+//export default function ProjectPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage({ params }: PageProps) {
+  const resolvedParams = React.use(params);
+  const project = getProjectBySlug(resolvedParams.slug)
   if (!project) notFound()
 
-  const currentIndex = projects.findIndex((p) => p.slug === params.slug)
+  const currentIndex = projects.findIndex((p) => p.slug === resolvedParams.slug)
   const prevProject = projects[currentIndex - 1] ?? null
   const nextProject = projects[currentIndex + 1] ?? null
 

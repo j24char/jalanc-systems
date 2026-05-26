@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import styles from './Nav.module.css'
-import logoImage from '/public/images/JalancSystemsWhiteBanner.svg'
+import logoImage from '../../public/images/JalancSystemsWhiteBanner.svg'
 
 export default function Nav() {
   const pathname = usePathname()
