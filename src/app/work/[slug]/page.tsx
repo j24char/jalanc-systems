@@ -27,8 +27,11 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 //export default function ProjectPage({ params }: { params: { slug: string } }) {
-export default function ProjectPage({ params }: PageProps) {
-  const resolvedParams = React.use(params);
+export default async function ProjectPage({ params }: PageProps) {
+  // const resolvedParams = params instanceof Promise || (params && typeof (params as any).then === 'function')
+  //   ? React.use(params)
+  //   : (params as any as { slug: string });
+  const resolvedParams = await params;
   const project = getProjectBySlug(resolvedParams.slug)
   if (!project) notFound()
 
