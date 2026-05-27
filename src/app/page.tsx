@@ -226,7 +226,7 @@ export default function Home() {
                 </p>
                 <div className={styles.contactDetail}>
                   <div className={styles.contactIcon}>@</div>
-                  <span>hello@jalancsystems.com</span>
+                  <span>information@jalancsystems.com</span>
                 </div>
                 <div className={styles.contactDetail}>
                   <div className={styles.contactIcon}>↗</div>
