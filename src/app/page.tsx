@@ -86,7 +86,7 @@ export default function Home() {
             <div className="section-header">
               <div>
                 <div className="section-num">02 — Portfolio</div>
-                <h2>SHIPPED WORK</h2>
+                <h2>COMPLETED WORK</h2>
               </div>
               <div className="section-aside">
                 Production apps &amp;<br />
