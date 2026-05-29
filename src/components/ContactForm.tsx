@@ -19,7 +19,7 @@ export default function ContactForm() {
     const formData = new FormData(form);
     console.log('Submitting contact form...');
 
-    // Compose the lead object (no serverTimestamp, handled by API)
+    // Compose the lead object (ready for new backend integration)
     const lead = {
       name: `${formData.get('firstName') || ''} ${formData.get('lastName') || ''}`.trim(),
       page: 'Contact',
@@ -36,17 +36,9 @@ export default function ContactForm() {
     };
 
     try {
-      // Send to Next.js API route
+      // TODO: Integrate with new backend here
       console.log('Lead object:', lead);
-      const response = await fetch('/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(lead),
-      });
-      if (!response.ok) {
-        throw new Error('Failed to submit lead');
-      }
-      console.log('Lead submitted successfully');
+      // Example: await fetch('/api/new-backend', { ... })
       setSubmitted(true);
     } catch (err: any) {
       console.error('Error submitting lead:', err);
