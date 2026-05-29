@@ -228,14 +228,14 @@ export default function Home() {
                   <div className={styles.contactIcon}>@</div>
                   <span>information@jalancsystems.com</span>
                 </div>
-                <div className={styles.contactDetail}>
+                {/* <div className={styles.contactDetail}>
                   <div className={styles.contactIcon}>↗</div>
                   <span>linkedin.com/in/jalancsystems</span>
                 </div>
                 <div className={styles.contactDetail}>
                   <div className={styles.contactIcon}>{'{ }'}</div>
                   <span>github.com/jalancsystems</span>
-                </div>
+                </div> */}
               </div>
             </FadeUp>
             <FadeUp delay={120}>
