@@ -19,8 +19,7 @@ export default function ContactForm() {
     const formData = new FormData(form);
     console.log('Submitting contact form...');
 
-    // Compose the lead object
-    const { serverTimestamp } = await import('firebase/firestore');
+    // Compose the lead object (no serverTimestamp, handled by API)
     const lead = {
       name: `${formData.get('firstName') || ''} ${formData.get('lastName') || ''}`.trim(),
       page: 'Contact',
@@ -34,15 +33,19 @@ export default function ContactForm() {
       utm: typeof window !== 'undefined' ? window.location.search : '',
       email: formData.get('email') || '',
       message: formData.get('message') || '',
-      createdAt: serverTimestamp(),
     };
 
     try {
-      // Directly add to Firestore
-      const { collection, addDoc } = await import('firebase/firestore');
-      const { db } = await import('../lib/firebase');
+      // Send to Next.js API route
       console.log('Lead object:', lead);
-      await addDoc(collection(db, 'leads'), lead);
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to submit lead');
+      }
       console.log('Lead submitted successfully');
       setSubmitted(true);
     } catch (err: any) {
