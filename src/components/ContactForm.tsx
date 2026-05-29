@@ -17,6 +17,7 @@ export default function ContactForm() {
     setError(null);
     const form = e.currentTarget;
     const formData = new FormData(form);
+    console.log('Submitting contact form...');
 
     // Compose the lead object
     const { serverTimestamp } = await import('firebase/firestore');
@@ -40,9 +41,12 @@ export default function ContactForm() {
       // Directly add to Firestore
       const { collection, addDoc } = await import('firebase/firestore');
       const { db } = await import('../lib/firebase');
+      console.log('Lead object:', lead);
       await addDoc(collection(db, 'leads'), lead);
+      console.log('Lead submitted successfully');
       setSubmitted(true);
     } catch (err: any) {
+      console.error('Error submitting lead:', err);
       setError('Failed to send. Please try again later.');
     } finally {
       setLoading(false);
