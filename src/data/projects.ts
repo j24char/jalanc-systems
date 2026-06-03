@@ -106,6 +106,28 @@ export const projects: Project[] = [
     logo: '',
     url: '',
   },
+    {
+    slug: 'Jiggerless',
+    num: '005',
+    name: 'Jiggerless',
+    type: 'Mobile App - Bartender Training',
+    tagline: 'A mobile app designed to help bartenders learn how to pour drinks without using a jigger.',
+    description:
+      'A mobile app designed to help bartenders learn how to pour drinks without using a jigger.',
+    challenge:
+      'The goal was to develop an app that used the phone axis sensors to simulate pour timing and accuracy rather than using real product.',
+    solution:
+      'A simple and fun game that teaches proper pour timing without the cost of mixing real drinks.',
+    outcome:
+      'The game was developed in less than a month and was well-received by users. Many requests for additional features.',
+    stack: ['React Native', 'Expo', 'TypeScript', 'Sensors', 'Device Storage'],
+    status: 'Private',
+    year: '2026',
+    duration: '4 weeks',
+    role: 'Sole Developer',
+    logo: '/images/Jiggerless.png',
+    url: '',
+  },
 ]
 
 export function getProjectBySlug(slug: string): Project | undefined {
