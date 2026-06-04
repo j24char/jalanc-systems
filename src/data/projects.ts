@@ -38,7 +38,7 @@ export const projects: Project[] = [
     duration: '2 weeks',
     role: 'Sole Developer',
     logo: '/images/SportsBingo.png',
-    url: 'https://apps.apple.com/us/app/sportsbingo2026/id6763379742',
+    url: 'https://sports-bingo-2026.vercel.app/',
   },
   {
     slug: 'InModeration',
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     duration: '4 weeks',
     role: 'Sole Developer',
     logo: '/images/Jiggerless.png',
-    url: '',
+    url: 'https://jiggerless-spa.vercel.app/',
   },
 ]
 
