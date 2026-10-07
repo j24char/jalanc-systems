@@ -106,7 +106,7 @@ export const projects: Project[] = [
     logo: '',
     url: '',
   },
-    {
+  {
     slug: 'Jiggerless',
     num: '005',
     name: 'Jiggerless',
@@ -127,6 +127,28 @@ export const projects: Project[] = [
     role: 'Sole Developer',
     logo: '/images/Jiggerless.png',
     url: 'https://jiggerless-spa.vercel.app/',
+  },
+  {
+    slug: 'Cat-Box-Packing',
+    num: '006',
+    name: 'Cat Box Packing',
+    type: 'Mobile App - Puzzle Game',
+    tagline: 'A cute puzzle game where you fit cat shapes into boxes.',
+    description:
+      'A cute puzzle game where you fit cat shapes into boxes.',
+    challenge:
+      'The goal was to develop an app that was intuitive and engaging for users.',
+    solution:
+      'A simple and fun game that tested well with the target user group.',
+    outcome:
+      'The game was developed in less than a month and was well-received by users. Many requests for additional features.',
+    stack: ['React Native', 'Expo', 'TypeScript', 'Sensors', 'Device Storage'],
+    status: 'Private',
+    year: '2026',
+    duration: '4 weeks',
+    role: 'Sole Developer',
+    logo: '/images/cat-box-packing.png',
+    url: 'https://cat-box-packing-spa.vercel.app/',
   },
 ]
 
