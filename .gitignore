@@ -14,6 +14,9 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+lead-export-state.json
+lead-export-state.json.tmp
+new-leads.jsonl
 
 # OS clutter
 .DS_Store
