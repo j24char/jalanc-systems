@@ -99,7 +99,7 @@ export const projects: Project[] = [
     outcome:
       'The app was well-received by users, with positive feedback on the social aspects and voting functionality.',
     stack: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'Vercel'],
-    status: 'Pending App Store Approval',
+    status: 'App Store',
     year: '2026',
     duration: '2 weeks',
     role: 'Lead Architect & Developer',
