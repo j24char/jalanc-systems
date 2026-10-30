@@ -85,7 +85,7 @@ export const projects: Project[] = [
     url: 'https://sports-bingo-2026.vercel.app/',
   },
   {
-    slug: 'Top Dog',
+    slug: 'TopDog',
     num: '004',
     name: 'Top Dog',
     type: 'Mobile App — Pet Social Network',
